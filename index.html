@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Apply red outline for accessibility when an element receives focus, excluding .skip-link */
+      :not(.skip-link):focus {
+        outline: 5px solid red;
+      }
+
+      /* Skip link styling: hidden by default (translated out of view), shown when focused */
+      .skip-link {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 0.5rem;
+        translate: 0 -100%;
+        transition: 100ms ease-out;
+      }
+
+      /* Reveal skip link when it receives focus */
+      .skip-link:focus {
+        translate: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Skip links for keyboard users to bypass navigation -->
+      <a href="#main-content" class="skip-link">Skip to main Content</a>
+      <a href="#footer-content" class="skip-link">Skip to Footer content</a>
+
+      <!-- Primary navigation menu -->
+      <nav>
+        <ul style="display: flex; list-style: none; gap: 1rem">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Above</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">View</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content starts here -->
+    <main id="main-content">
+      <h1>Article</h1>
+      <article>
+        <p>
+          <!-- Sample paragraph text with a link -->
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo aperiam
+          repudiandae similique fugit perspiciatis ex excepturi officiis nostrum
+          at a quidem pariatur autem minima placeat soluta facilis aut, alias
+          unde. Voluptatibus modi consectetur blanditiis expedita numquam sunt
+          laudantium illo magni pariatur! Repellendus nesciunt repellat quo
+          odit. Blanditiis iure exercitationem illum quia, quibusdam laboriosam?
+          Accusantium totam reprehenderit, consequuntur corrupti numquam ex.
+          Debitis eos unde nostrum repellendus, dolore saepe laborum provident
+          ratione modi ipsa eaque. Hic, et quisquam? Dolor adipisci quo et at
+          voluptatum quod. Eveniet dolor, repellat
+          <a href="#">link</a> praesentium ad explicabo neque. Quod ullam veniam
+          ab aliquam quos nesciunt, ad maiores repudiandae, earum quibusdam at
+          enim pariatur adipisci quae, consequatur nemo minusrspiciatis ex
+          excepturi officiis nostrum at a quidem pariatur autem minima placeat
+          soluta facilis aut, alias unde. Voluptatibus modi consectetur
+          blanditiis expedita numquam sunt laudantium illo magni pariatur!
+          Repellendus nesciunt repellat quo odit. Blanditiis iure exercitationem
+          illum quia, quibusdam laboriosam? Accusantium totam reprehenderit,
+          consequuntur corrupti numquam ex. Debitis eos unde nostrum
+          repellendus, dolore saepe laborum provident ratione modi ipsa eaque.
+          Hic, et quisquam? Dolor adipisci quo et at <a href="#">link</a> ...
+        </p>
+      </article>
+
+      <!-- Additional skip link (redundant, but could be for long articles) -->
+      <a href="#skip-list" class="skip-link">Skip to Footer content</a>
+
+      <!-- List of links -->
+      <ol>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ol>
+
+      <!-- Secondary content section -->
+      <section>
+        <!-- Typo: <artice> should be <article> -->
+        <article>
+          <p id="skip-list">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+            voluptate. Illum laudantium autem cupiditate optio nesciunt dolorem
+            dolores eligendi suscipit nostrum fuga, perspiciatis dicta enim cum
+            consequatur provident porro iusto? Ut tempora eos quae assumenda
+            dolorum natus voluptatem corrupti voluptate quo, dolorem cupiditate
+            delectus tenetur aut, illum, quaerat et beatae asperiores ad ducimus
+            reprehenderit pariatur nihil? Molestiae doloremque cupiditate quasi!
+            Eligendi molestias ullam earum repudiandae inventore fugiat quis,
+            blanditiis excepturi voluptatem nemo est, autem nesciunt amet
+            asperiores rem corporis saepe nulla, rerum dicta? Adipisci dolor
+            assumenda eos dolores illo id. Maxime officia autem numquam iusto
+            architecto fugiat earum porro est repudiandae ea dignissimos nemo
+            inventore libero ipsa neque officiis ex, soluta sequi qui. Ipsam
+            suscipit mollitia beatae dignissimos quos ut! Natus nemo officiis,
+            neque, illo voluptas praesentium molestiae commodi quod maiores
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer with navigation links -->
+    <footer id="footer-content">
+      <nav>
+        <ul style="display: flex; list-style: none; gap: 1rem">
+          <!-- Link spelling could be corrected from "Linnk" to "Link" -->
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link e</a></li>
+          <li><a href="#">Link e</a></li>
+          <li><a href="#">Link act</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link n</a></li>
+          <li><a href="#">Link Up</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
